@@ -4,8 +4,6 @@ A SQL-driven customer intelligence project for a direct-to-consumer (D2C) fashio
 one question: **are customers genuinely loyal, or is the business just buying repeat visits with
 discounts?**
 
-> Consulting & Analytics Club, IIT Guwahati — SQL | Consulting Case
-
 ---
 
 ## Business Problem
@@ -35,7 +33,14 @@ fields, not assumed.
 │   └── customer_features.csv    # Cleaned data + engineered features (output of notebook 1)
 ├── notebooks/
 │   ├── customer_retention_strategy_analysis.ipynb   # Python: cleaning, EDA, feature engineering
-│   └── sqlQuaries.ipynb                             # SQL: segmentation queries via SQLite
+├── Playbook/
+|   └── Retention Playbook.docx
+├── Powerbi/
+|   └── customer_dashboard.pbix
+├── sql/
+|   ├── customer.db
+|   └── sqlQuaries.ipynb
+├── Executive summary.docx
 └── README.md
 ```
 
@@ -100,15 +105,10 @@ Each query is paired with a short written answer interpreting the result for a n
    ```
 2. Run `notebooks/customer_retention_strategy_analysis.ipynb` first — it cleans `data/Dataset.csv`,
    engineers the loyalty and promo-dependency metrics, and writes `data/customer_features.csv`.
-3. Run `notebooks/sqlQuaries.ipynb` next — it loads `data/customer_features.csv` into SQLite and runs the
+3. Run `sql/sqlQuaries.ipynb` next — it loads `data/customer_features.csv` into SQLite and runs the
    segmentation queries.
 
 ## Tech Stack
 
 - **Python** — pandas, NumPy, scikit-learn (`MinMaxScaler`), Matplotlib
 - **SQL** — SQLite (via `sqlite3`), queried through pandas
-
-## Author
-
-Prepared for the Consulting & Analytics Club, IIT Guwahati — *Decoding Customer Value: A SQL-Driven
-Retention Strategy* case.
